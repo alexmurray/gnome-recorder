@@ -4,7 +4,7 @@ Release:	1%{?dist}
 Summary:	JS Application
 
 License:	BSD
-URL:		http://www.example.com/gtk-js-app
+URL:		http://www.example.com/gnome-recorder
 Source0:        %{_distdir}-%{version}.tar.xz
 BuildArch:      noarch
 

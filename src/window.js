@@ -56,7 +56,7 @@ const MainWindow = new Lang.Class({
                             state: new GLib.Variant('b', false) }]);
 
         let builder = new Gtk.Builder();
-        builder.add_from_resource('/com/example/Gtk/JSApplication/main.ui');
+        builder.add_from_resource('/com/github/alexmurray/GNOMERecorder/main.ui');
 
         this.set_titlebar(builder.get_object('main-header'));
 
@@ -107,15 +107,16 @@ const MainWindow = new Lang.Class({
 
     _about: function() {
         let aboutDialog = new Gtk.AboutDialog(
-            { authors: [ 'Giovanni Campagna <gcampagna@src.gnome.org>' ],
+            { authors: [ 'Alex Murray <murray.alex@gmail.com>',
+                         'Giovanni Campagna <gcampagna@src.gnome.org>' ],
               translator_credits: _("translator-credits"),
-              program_name: _("JS Application"),
-              comments: _("Demo JS Application and template"),
-              copyright: 'Copyright 2013 The gjs developers',
+              program_name: _("GNOME Recorder"),
+              comments: _("Screencast recorder and manager for GNOME"),
+              copyright: 'Copyright 2013 Alex Murray',
               license_type: Gtk.License.GPL_2_0,
-              logo_icon_name: 'com.example.Gtk.JSApplication',
+              logo_icon_name: 'com.github.alexmurray.GNOMERecorder',
               version: pkg.version,
-              website: 'http://www.example.com/gtk-js-app/',
+              website: 'https://github.com/alexmurray/gnome-recorder/',
               wrap_license: true,
               modal: true,
               transient_for: this

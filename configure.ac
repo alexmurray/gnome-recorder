@@ -1,8 +1,8 @@
 AC_PREREQ(2.63)
-AC_INIT([com.example.Gtk.JSApplication], [0.1],
-        [bugs@js-app.example.com],
-        [gtk-js-app],
-        [http://www.example.com/gtk-js-app/])
+AC_INIT([com.github.alexmurray.GNOMERecorder], [0.1],
+        [https://github.com/alexmurray/gnome-recorder/issues],
+        [gnome-recorder],
+        [https://github.com/alexmurray/gnome-recorder/])
 
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])

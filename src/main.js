@@ -47,8 +47,8 @@ function initEnvironment() {
     };
 }
 
-const MyApplication = new Lang.Class({
-    Name: 'MyApplication',
+const GRApplication = new Lang.Class({
+    Name: 'GRApplication',
     Extends: Gtk.Application,
 
     _init: function() {
@@ -57,7 +57,7 @@ const MyApplication = new Lang.Class({
         if (this.flags & Gio.ApplicationFlags.IS_SERVICE)
             this.inactivity_timeout = 60000;
 
-        GLib.set_application_name(_("My JS Application"));
+        GLib.set_application_name(_("GNOME Recorder"));
     },
 
     _onQuit: function() {
@@ -66,7 +66,7 @@ const MyApplication = new Lang.Class({
 
     _initAppMenu: function() {
         let builder = new Gtk.Builder();
-        builder.add_from_resource('/com/example/Gtk/JSApplication/app-menu.ui');
+        builder.add_from_resource('/com/github/alexmurray/GNOMERecorder/app-menu.ui');
 
         let menu = builder.get_object('app-menu');
         this.set_app_menu(menu);
@@ -75,14 +75,14 @@ const MyApplication = new Lang.Class({
     vfunc_startup: function() {
         this.parent();
 
-        Util.loadStyleSheet('/com/example/Gtk/JSApplication/application.css');
+        Util.loadStyleSheet('/com/github/alexmurray/GNOMERecorder/application.css');
 
         Util.initActions(this,
                          [{ name: 'quit',
                             activate: this._onQuit }]);
         this._initAppMenu();
 
-        log(_("My JS Application started"));
+        log(_("GNOME Recorder started"));
     },
 
     vfunc_activate: function() {
@@ -90,7 +90,7 @@ const MyApplication = new Lang.Class({
     },
 
     vfunc_shutdown: function() {
-        log(_("My JS Application exiting"));
+        log(_("GNOME Recorder exiting"));
 
         this.parent();
     }
@@ -99,5 +99,5 @@ const MyApplication = new Lang.Class({
 function main(argv) {
     initEnvironment();
 
-    return (new MyApplication()).run(argv);
+    return (new GRApplication()).run(argv);
 }

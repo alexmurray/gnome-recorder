@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-  <id type="desktop">com.example.Gtk.JSApplication.desktop</id>
+  <id type="desktop">com.github.alexmurray.GNOMERecorder.desktop</id>
   <licence>CC0</licence>
   <description>
     <_p>
@@ -16,8 +16,8 @@
     </ul>
   </description>
   <screenshots>
-    <screenshot type="default" width="1024" height="768">https://www.example.com/gtk-js-app/screenshots/large.png</screenshot>
+    <screenshot type="default" width="1024" height="768">https://www.example.com/gnome-recorder/screenshots/large.png</screenshot>
   </screenshots>
-  <url type="homepage">https://www.example.com/gtk-js-app</url>
+  <url type="homepage">https://www.example.com/gnome-recorder</url>
   <updatecontact>gcampagna_at_src.gnome.org</updatecontact>
 </application>
